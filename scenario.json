@@ -1,0 +1,44 @@
+{
+  "today": "2026-11-01",
+  "model": "claude-opus-5-5",
+  "effort": "medium",
+  "sessions": [
+    {
+      "name": "s1",
+      "turns": [
+        {"id": "t1", "user": "היי! תוסיף בבקשה שתי מטלות: תרגיל 3 בלינארית, הגשה ב-5.11, בערך 3 שעות. ותרגיל 2 במבוא למדמ\"ח, הגשה ב-4.11, בערך שעתיים."},
+        {"id": "t2", "user": "אילו נושאים יהיו במבחן בלינארית? ומה המשקל של התרגילים בציון? תבדוק בסילבוס."},
+        {"id": "t3", "user": "כמה דברים שחשוב שתזכור להבא: הכי נוח לי ללמוד בבוקר, לא יותר מ-3 שעות ביום, ושבת היא יום חופש מלימודים."},
+        {"id": "t4", "user": "מעולה, תבנה לי תוכנית לימודים לשבוע הקרוב."}
+      ]
+    },
+    {
+      "name": "s2",
+      "turns": [
+        {"id": "t5", "user": "סיימתי את תרגיל 2 במבוא. מה עוד נשאר לי?"},
+        {"id": "t6", "user": "תזכיר לי, באיזה זמן ביום אמרתי שנוח לי ללמוד, וכמה שעות ביום?"},
+        {"id": "t7", "user": "שינוי: מעכשיו אני רוצה ללמוד בערבים ולא בבקרים. תעדכן ותבנה מחדש את התוכנית לשבוע."}
+      ]
+    }
+  ],
+  "checks": [
+    {"id": "c1", "description": "שתי המטלות נשמרו עם הקורס ותאריך ההגשה הנכונים",
+     "type": "task_exists", "course": "linear-algebra", "title_contains": "3", "due": "2026-11-05"},
+    {"id": "c2", "description": "מטלת המבוא נשמרה ואז סומנה כ-done בסשן 2",
+     "type": "task_status", "course": "intro-cs", "title_contains": "2", "status": "done"},
+    {"id": "c3", "description": "הבקשה הסותרת דרסה את ההעדפה: study_time = evening",
+     "type": "memory_equals", "key": "study_time", "value": "evening"},
+    {"id": "c4", "description": "הערך הישן (morning) נשמר בהיסטוריה של המפתח",
+     "type": "memory_history_contains", "key": "study_time", "value": "morning"},
+    {"id": "c5", "description": "שאר ההעדפות נשמרו: עד 3 שעות ביום",
+     "type": "memory_equals", "key": "max_hours_per_day", "value": "3"},
+    {"id": "c6", "description": "שבת נשמרה כיום חופש",
+     "type": "memory_contains", "key": "days_off", "value": "saturday"},
+    {"id": "c7", "description": "התוכנית האחרונה בערב, בלי שבת ובלי יותר מ-3 שעות ביום",
+     "type": "plan", "slot": "evening", "no_weekday": "saturday", "max_hours_per_day": 3},
+    {"id": "c8", "description": "הכלי החיצוני (קובץ הסילבוס) הופעל בתור 2",
+     "type": "tool_called", "turn": "t2", "tool": "read_syllabus"},
+    {"id": "c9", "description": "בסשן 2 הסוכן שלף מהזיכרון את 'בוקר' ואת 3 השעות",
+     "type": "response_contains_any", "turn": "t6", "any": ["בוקר", "בבוקר", "בקרים", "morning"]}
+  ]
+}

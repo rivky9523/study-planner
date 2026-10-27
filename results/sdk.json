@@ -1,0 +1,431 @@
+{
+  "version": "sdk",
+  "model": "claude-opus-5-5",
+  "effort": "medium",
+  "turns": [
+    {
+      "session": "s1",
+      "turn": "t1",
+      "user": "היי! תוסיף בבקשה שתי מטלות: תרגיל 3 בלינארית, הגשה ב-5.11, בערך 3 שעות. ותרגיל 2 במבוא למדמ\"ח, הגשה ב-4.11, בערך שעתיים.",
+      "response": "הוספתי את שתי המטלות:\n- **תרגיל 2 במבוא למדמ\"ח**: הגשה ב-4.11, כשעתיים\n- **תרגיל 3 בלינארית**: הגשה ב-5.11, כ-3 שעות\n\nרוצה שאבנה לך תוכנית לימודים לשבוע?",
+      "tools": [
+        "add_task",
+        "add_task"
+      ],
+      "model_calls": 2,
+      "tokens": {
+        "input": 4,
+        "cache_read": 2659,
+        "cache_write": 3052,
+        "output": 398
+      },
+      "cost_usd": 0.033233,
+      "model_usage": {
+        "claude-opus-5-5": {
+          "inputTokens": 4,
+          "outputTokens": 398,
+          "cacheReadInputTokens": 2659,
+          "cacheCreationInputTokens": 3052,
+          "webSearchRequests": 0,
+          "costUSD": 0.0329238,
+          "contextWindow": 1000000,
+          "maxOutputTokens": 128000,
+          "thinkingTokens": 15,
+          "canonicalModel": "claude-opus-5-5",
+          "provider": "firstParty",
+          "costBasis": "list"
+        },
+        "claude-haiku-5-5": {
+          "inputTokens": 1277,
+          "outputTokens": 364,
+          "cacheReadInputTokens": 0,
+          "cacheCreationInputTokens": 0,
+          "webSearchRequests": 0,
+          "costUSD": 0.0003097,
+          "contextWindow": 1000000,
+          "maxOutputTokens": 128000,
+          "thinkingTokens": 335,
+          "canonicalModel": "claude-haiku-5-5",
+          "provider": "firstParty",
+          "costBasis": "list"
+        }
+      },
+      "seconds": 7.88,
+      "stop_reason": "end_turn",
+      "sdk_turns": 3
+    },
+    {
+      "session": "s1",
+      "turn": "t2",
+      "user": "אילו נושאים יהיו במבחן בלינארית? ומה המשקל של התרגילים בציון? תבדוק בסילבוס.",
+      "response": "לפי הסילבוס של לינארית:\n\n**נושאים למבחן:**\n- מערכות משוואות לינאריות ודירוג (אלימינציית גאוס)\n- מרחבים וקטוריים, תתי-מרחבים, פרישה ותלות לינארית\n- בסיס ומימד\n- העתקות לינאריות, גרעין ותמונה\n- מטריצות: דרגה, הפיכות ודטרמיננטות\n- ❌ ערכים עצמיים **לא** יהיו במבחן (עברו ללינארית 2)\n\n**משקל התרגילים:** 10% מהציון. צריך להגיש לפחות 8 מתוך 10 תרגילים.\n(שאר הציון: בוחן אמצע 20% כמגן, כלומר נחשב רק אם הוא משפר את הציון. המבחן הסופי שווה 70–90%.)",
+      "tools": [
+        "read_syllabus",
+        "read_syllabus"
+      ],
+      "model_calls": 2,
+      "tokens": {
+        "input": 6,
+        "cache_read": 6308,
+        "cache_write": 690,
+        "output": 472
+      },
+      "cost_usd": 0.049479,
+      "model_usage": {
+        "claude-opus-5-5": {
+          "inputTokens": 10,
+          "outputTokens": 870,
+          "thinkingTokens": 15,
+          "cacheReadInputTokens": 8967,
+          "cacheCreationInputTokens": 3742,
+          "webSearchRequests": 0,
+          "costUSD": 0.0491694,
+          "contextWindow": 1000000,
+          "maxOutputTokens": 128000,
+          "canonicalModel": "claude-opus-5-5",
+          "provider": "firstParty",
+          "costBasis": "list"
+        },
+        "claude-haiku-5-5": {
+          "inputTokens": 1277,
+          "outputTokens": 364,
+          "thinkingTokens": 335,
+          "cacheReadInputTokens": 0,
+          "cacheCreationInputTokens": 0,
+          "webSearchRequests": 0,
+          "costUSD": 0.0003097,
+          "contextWindow": 1000000,
+          "maxOutputTokens": 128000
+        }
+      },
+      "seconds": 8.99,
+      "stop_reason": "end_turn",
+      "sdk_turns": 3
+    },
+    {
+      "session": "s1",
+      "turn": "t3",
+      "user": "כמה דברים שחשוב שתזכור להבא: הכי נוח לי ללמוד בבוקר, לא יותר מ-3 שעות ביום, ושבת היא יום חופש מלימודים.",
+      "response": "שמרתי את ההעדפות להבא: לימודים בבוקר, עד 3 שעות ביום ושבת חופש.\n\nבניתי לפיהן תוכנית לשבוע:\n- **ראשון 1.11:** תרגיל 2 במבוא למדמ\"ח (שעתיים) ותחילת תרגיל 3 בלינארית (שעה)\n- **שני 2.11:** סיום תרגיל 3 בלינארית (שעתיים)\n- **שלישי עד שישי:** פנויים\n- **שבת:** חופש\n\nשתי המטלות יהיו מוכנות כמה ימים לפני ההגשה.",
+      "tools": [
+        "save_memory",
+        "save_memory",
+        "save_memory",
+        "plan_week"
+      ],
+      "model_calls": 3,
+      "tokens": {
+        "input": 8,
+        "cache_read": 12457,
+        "cache_write": 985,
+        "output": 560
+      },
+      "cost_usd": 0.071083,
+      "model_usage": {
+        "claude-opus-5-5": {
+          "inputTokens": 18,
+          "outputTokens": 1430,
+          "thinkingTokens": 15,
+          "cacheReadInputTokens": 21424,
+          "cacheCreationInputTokens": 4727,
+          "webSearchRequests": 0,
+          "costUSD": 0.07077280000000001,
+          "contextWindow": 1000000,
+          "maxOutputTokens": 128000,
+          "canonicalModel": "claude-opus-5-5",
+          "provider": "firstParty",
+          "costBasis": "list"
+        },
+        "claude-haiku-5-5": {
+          "inputTokens": 1277,
+          "outputTokens": 364,
+          "thinkingTokens": 335,
+          "cacheReadInputTokens": 0,
+          "cacheCreationInputTokens": 0,
+          "webSearchRequests": 0,
+          "costUSD": 0.0003097,
+          "contextWindow": 1000000,
+          "maxOutputTokens": 128000
+        }
+      },
+      "seconds": 8.69,
+      "stop_reason": "end_turn",
+      "sdk_turns": 5
+    },
+    {
+      "session": "s1",
+      "turn": "t4",
+      "user": "מעולה, תבנה לי תוכנית לימודים לשבוע הקרוב.",
+      "response": "התוכנית לשבוע (1.11–7.11) שמורה. היא בנויה לפי ההעדפות שלך: לימודים בבוקר, עד 3 שעות ביום ושבת חופש.\n\n- **ראשון 1.11:** תרגיל 2 במבוא למדמ\"ח (שעתיים) ותחילת תרגיל 3 בלינארית (שעה)\n- **שני 2.11:** סיום תרגיל 3 בלינארית (שעתיים)\n- **שלישי עד שישי:** פנויים\n- **שבת:** חופש\n\nשתי המטלות יסתיימו עד יום שני, כלומר יומיים לפני ההגשה הראשונה. אפשר לנצל את הימים הפנויים לחזרה על החומר למבחן בלינארית.",
+      "tools": [
+        "plan_week"
+      ],
+      "model_calls": 2,
+      "tokens": {
+        "input": 6,
+        "cache_read": 9728,
+        "cache_write": 526,
+        "output": 409
+      },
+      "cost_usd": 0.08544,
+      "model_usage": {
+        "claude-opus-5-5": {
+          "inputTokens": 24,
+          "outputTokens": 1839,
+          "thinkingTokens": 65,
+          "cacheReadInputTokens": 31152,
+          "cacheCreationInputTokens": 5253,
+          "webSearchRequests": 0,
+          "costUSD": 0.08513040000000001,
+          "contextWindow": 1000000,
+          "maxOutputTokens": 128000,
+          "canonicalModel": "claude-opus-5-5",
+          "provider": "firstParty",
+          "costBasis": "list"
+        },
+        "claude-haiku-5-5": {
+          "inputTokens": 1277,
+          "outputTokens": 364,
+          "thinkingTokens": 335,
+          "cacheReadInputTokens": 0,
+          "cacheCreationInputTokens": 0,
+          "webSearchRequests": 0,
+          "costUSD": 0.0003097,
+          "contextWindow": 1000000,
+          "maxOutputTokens": 128000
+        }
+      },
+      "seconds": 7.1,
+      "stop_reason": "end_turn",
+      "sdk_turns": 2
+    },
+    {
+      "session": "s2",
+      "turn": "t5",
+      "user": "סיימתי את תרגיל 2 במבוא. מה עוד נשאר לי?",
+      "response": "סימנתי את תרגיל 2 במבוא כבוצע 👍\n\nנשארה לך רק משימה פתוחה אחת:\n- **תרגיל 3 בלינארית**: להגשה ב-5.11, מוערך ב-3 שעות.\n\nעדכנתי את התוכנית לפי ההעדפות שלך (בוקר, עד 3 שעות ביום, שבת חופש). כל 3 השעות של התרגיל נכנסו להיום, ושאר השבוע פנוי. אם תעדיפי לפזר אותן על כמה ימים, תגידי לי ואשנה.",
+      "tools": [
+        "list_tasks",
+        "update_task",
+        "list_tasks",
+        "plan_week"
+      ],
+      "model_calls": 4,
+      "tokens": {
+        "input": 8,
+        "cache_read": 10116,
+        "cache_write": 1395,
+        "output": 485
+      },
+      "cost_usd": 0.023146,
+      "model_usage": {
+        "claude-haiku-5-5": {
+          "inputTokens": 1211,
+          "outputTokens": 220,
+          "cacheReadInputTokens": 0,
+          "cacheCreationInputTokens": 0,
+          "webSearchRequests": 0,
+          "costUSD": 0.00023110000000000003,
+          "contextWindow": 1000000,
+          "maxOutputTokens": 128000,
+          "thinkingTokens": 188,
+          "canonicalModel": "claude-haiku-5-5",
+          "provider": "firstParty",
+          "costBasis": "list"
+        },
+        "claude-opus-5-5": {
+          "inputTokens": 8,
+          "outputTokens": 485,
+          "cacheReadInputTokens": 10116,
+          "cacheCreationInputTokens": 1395,
+          "webSearchRequests": 0,
+          "costUSD": 0.0229152,
+          "contextWindow": 1000000,
+          "maxOutputTokens": 128000,
+          "thinkingTokens": 31,
+          "canonicalModel": "claude-opus-5-5",
+          "provider": "firstParty",
+          "costBasis": "list"
+        }
+      },
+      "seconds": 11.54,
+      "stop_reason": "end_turn",
+      "sdk_turns": 5
+    },
+    {
+      "session": "s2",
+      "turn": "t6",
+      "user": "תזכיר לי, באיזה זמן ביום אמרתי שנוח לי ללמוד, וכמה שעות ביום?",
+      "response": "אמרת שנוח לך ללמוד **בבוקר**, ושאת רוצה **עד 3 שעות ביום**. שבת אצלך יום חופש.\n\nאם משהו מזה השתנה, תגידי לי ואעדכן את התוכנית.",
+      "tools": [
+        "recall_memory"
+      ],
+      "model_calls": 2,
+      "tokens": {
+        "input": 6,
+        "cache_read": 6595,
+        "cache_write": 476,
+        "output": 193
+      },
+      "cost_usd": 0.032157,
+      "model_usage": {
+        "claude-haiku-5-5": {
+          "inputTokens": 1211,
+          "outputTokens": 220,
+          "thinkingTokens": 188,
+          "cacheReadInputTokens": 0,
+          "cacheCreationInputTokens": 0,
+          "webSearchRequests": 0,
+          "costUSD": 0.00023110000000000003,
+          "contextWindow": 1000000,
+          "maxOutputTokens": 128000
+        },
+        "claude-opus-5-5": {
+          "inputTokens": 14,
+          "outputTokens": 678,
+          "thinkingTokens": 65,
+          "cacheReadInputTokens": 16711,
+          "cacheCreationInputTokens": 1871,
+          "webSearchRequests": 0,
+          "costUSD": 0.0319262,
+          "contextWindow": 1000000,
+          "maxOutputTokens": 128000,
+          "canonicalModel": "claude-opus-5-5",
+          "provider": "firstParty",
+          "costBasis": "list"
+        }
+      },
+      "seconds": 6.15,
+      "stop_reason": "end_turn",
+      "sdk_turns": 2
+    },
+    {
+      "session": "s2",
+      "turn": "t7",
+      "user": "שינוי: מעכשיו אני רוצה ללמוד בערבים ולא בבקרים. תעדכן ותבנה מחדש את התוכנית לשבוע.",
+      "response": "עדכנתי: מעכשיו את לומדת **בערבים** במקום בבקרים.\n\nהתוכנית החדשה לשבוע:\n- **ראשון (היום), בערב:** תרגיל 3 בלינארית, 3 שעות (להגשה ב-5.11)\n- **שני עד שישי:** פנוי\n- **שבת:** חופש\n\nנשארה הגבלה של עד 3 שעות ביום. אם תרצי לפזר את התרגיל על כמה ערבים, תגידי לי.",
+      "tools": [
+        "save_memory",
+        "plan_week"
+      ],
+      "model_calls": 3,
+      "tokens": {
+        "input": 8,
+        "cache_read": 11328,
+        "cache_write": 438,
+        "output": 315
+      },
+      "cost_usd": 0.044259,
+      "model_usage": {
+        "claude-haiku-5-5": {
+          "inputTokens": 1211,
+          "outputTokens": 220,
+          "thinkingTokens": 188,
+          "cacheReadInputTokens": 0,
+          "cacheCreationInputTokens": 0,
+          "webSearchRequests": 0,
+          "costUSD": 0.00023110000000000003,
+          "contextWindow": 1000000,
+          "maxOutputTokens": 128000
+        },
+        "claude-opus-5-5": {
+          "inputTokens": 22,
+          "outputTokens": 993,
+          "thinkingTokens": 65,
+          "cacheReadInputTokens": 28039,
+          "cacheCreationInputTokens": 2309,
+          "webSearchRequests": 0,
+          "costUSD": 0.044027800000000006,
+          "contextWindow": 1000000,
+          "maxOutputTokens": 128000,
+          "canonicalModel": "claude-opus-5-5",
+          "provider": "firstParty",
+          "costBasis": "list"
+        }
+      },
+      "seconds": 7.97,
+      "stop_reason": "end_turn",
+      "sdk_turns": 3
+    }
+  ],
+  "summary": {
+    "tokens": {
+      "input": 46,
+      "cache_read": 59191,
+      "cache_write": 7562,
+      "output": 2832
+    },
+    "cache_hit_pct": 88.6,
+    "model_calls": 18,
+    "cost_usd": 0.3388,
+    "seconds": 58.3
+  },
+  "checks": [
+    {
+      "id": "c1",
+      "description": "שתי המטלות נשמרו עם הקורס ותאריך ההגשה הנכונים",
+      "pass": true,
+      "detail": "{\"course\": \"linear-algebra\", \"due\": \"2026-11-05\", \"hours\": 3.0, \"id\": \"T1\", \"status\": \"open\", \"title\": \"תרגיל 3\"}"
+    },
+    {
+      "id": "c2",
+      "description": "מטלת המבוא נשמרה ואז סומנה כ-done בסשן 2",
+      "pass": true,
+      "detail": "done"
+    },
+    {
+      "id": "c3",
+      "description": "הבקשה הסותרת דרסה את ההעדפה: study_time = evening",
+      "pass": true,
+      "detail": "evening"
+    },
+    {
+      "id": "c4",
+      "description": "הערך הישן (morning) נשמר בהיסטוריה של המפתח",
+      "pass": true,
+      "detail": "history=['morning']"
+    },
+    {
+      "id": "c5",
+      "description": "שאר ההעדפות נשמרו: עד 3 שעות ביום",
+      "pass": true,
+      "detail": "3"
+    },
+    {
+      "id": "c6",
+      "description": "שבת נשמרה כיום חופש",
+      "pass": true,
+      "detail": "saturday"
+    },
+    {
+      "id": "c7",
+      "description": "התוכנית האחרונה בערב, בלי שבת ובלי יותר מ-3 שעות ביום",
+      "pass": true,
+      "detail": "slot=evening"
+    },
+    {
+      "id": "c8",
+      "description": "הכלי החיצוני (קובץ הסילבוס) הופעל בתור 2",
+      "pass": true,
+      "detail": "tools=['read_syllabus', 'read_syllabus']"
+    },
+    {
+      "id": "c9",
+      "description": "בסשן 2 הסוכן שלף מהזיכרון את 'בוקר' ואת 3 השעות",
+      "pass": true,
+      "detail": "אמרת שנוח לך ללמוד **בבוקר**, ושאת רוצה **עד 3 שעות ביום**. שבת אצלך יום חופש.  אם משהו מזה השתנה, תגידי לי ואעדכן את הת"
+    }
+  ],
+  "checks_passed": "9/9",
+  "harness_loc": {
+    "loop": 4,
+    "tools": 7,
+    "history": 2,
+    "memory": 6,
+    "context": 2,
+    "compaction": 0,
+    "caching": 0,
+    "tokens": 7
+  },
+  "claude_agent_sdk_version": "0.2.172"
+}
